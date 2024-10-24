@@ -1,6 +1,6 @@
-button:focus:not(:focus-visible) {
+.navbar-toggler:focus:not(:focus-visible) {
     outline: 0;
-    color: transparent !important;
+    color: transparent !important ;
 }
 .navbar-brand{
   font-size: 30px !important;
@@ -28,4 +28,11 @@ nav .nav-link.router-link-exact-active {
 
 nav a:hover {
   color: red; /* Optional: Hover effect */
+}
+
+.navbar{
+  position: sticky;
+  top: 0%;
+  z-index: 1;
+
 }

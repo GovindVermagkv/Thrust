@@ -21,7 +21,7 @@
             <router-link class="nav-link" aria-current="page" to="/login" exact>Login</router-link>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" aria-current="page" to="/cart" exact>Cart <sup class="text-danger">*</sup></router-link>
+            <router-link class="nav-link" aria-current="page" to="/cart" exact>Cart <sup class="text-danger">{{ cartCount }}</sup></router-link>
           </li>
         </ul>
       </div>
@@ -31,12 +31,16 @@
   </template>
   
   <script>
+  import { mapGetters } from 'vuex';
   export default {
     data() {
       return {
         name: 'govind'
       };
     },
+    computed: {
+    ...mapGetters(['cartCount']), // Getting cartCount from Vuex store
+  },
     mounted() {
       console.log(this.name);
     }
