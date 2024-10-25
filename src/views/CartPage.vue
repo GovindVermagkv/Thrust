@@ -51,14 +51,19 @@
         <p class="text-start mb-5">
           <span class="text-danger mx-2">GST (18%):</span> ${{ gstAmount }}
         </p>
-        <h3 class="text-start ">
-          <span class="text-danger mx-2">Total Amount:</span> ${{ totalWithGST }}
+        <h3 class="text-start">
+          <span class="text-danger mx-2">Total Amount:</span> ${{
+            totalWithGST
+          }}
         </h3>
       </div>
     </div>
     <div class="zerovalue" v-else>
-        <p  class="text-center text-danger">No items in the cart yet.</p>
-        <img src="https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-illustration-download-in-svg-png-gif-file-formats--shopping-ecommerce-simple-error-state-pack-user-interface-illustrations-6024626.png" alt="">
+      <p class="text-center text-danger">No items in the cart yet.</p>
+      <img
+        src="https://cdni.iconscout.com/illustration/premium/thumb/empty-cart-illustration-download-in-svg-png-gif-file-formats--shopping-ecommerce-simple-error-state-pack-user-interface-illustrations-6024626.png"
+        alt=""
+      />
     </div>
   </div>
 </template>
@@ -68,7 +73,7 @@ import { mapGetters } from "vuex";
 
 export default {
   computed: {
-    ...mapGetters(['cart', 'totalPrice', 'gstAmount', 'totalWithGST']),
+    ...mapGetters(["cart", "totalPrice", "gstAmount", "totalWithGST"]),
   },
   methods: {
     increaseQuantity(item) {
@@ -94,37 +99,35 @@ export default {
 .main_custom {
   width: 70% !important;
 }
-.zerovalue{
-    width: 100%;
-    text-align: center;
-
+.zerovalue {
+  width: 100%;
+  text-align: center;
 }
-.btn-outline-secondary{
-    box-shadow: none !important;
+.btn-outline-secondary {
+  box-shadow: none !important;
   outline: none !important;
-    width: 30px;
-   font-weight:bold;
-   color: red !important;
+  width: 30px;
+  font-weight: bold;
+  color: red !important;
 }
-.btn-outline-secondary:focus{
-    box-shadow: none !important;
+.btn-outline-secondary:focus {
+  box-shadow: none !important;
   outline: none !important;
 }
-.btn-outline-secondary:hover{
-   background-color: red;
-   color: white !important;
-border-color: transparent !important;
+.btn-outline-secondary:hover {
+  background-color: red;
+  color: white !important;
+  border-color: transparent !important;
 }
 .zerovalue img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
 }
-.custom_card{
-    min-height: 150px !important;
-    max-height: 200px !important;
-    /* background-color: red !important; */
+.custom_card {
+  min-height: 150px !important;
+  max-height: 200px !important;
+  /* background-color: red !important; */
 }
 
 .list-group-item {
@@ -142,12 +145,12 @@ border-color: transparent !important;
   background-color: #dc3545;
 }
 
-@media screen and (max-width:990px) {
-    .container{
-        flex-direction: column;
-    }
-    .main_custom {
-  width: 100% !important;
-}
+@media screen and (max-width: 990px) {
+  .container {
+    flex-direction: column;
+  }
+  .main_custom {
+    width: 100% !important;
+  }
 }
 </style>
