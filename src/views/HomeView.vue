@@ -19,3 +19,10 @@ export default {
   }
 }
 </script>
+<style scoped>
+@media screen and (max-width:556px) {
+  .home{
+    padding: 20px 10px !important;
+  }
+}
+</style>

@@ -12,6 +12,9 @@ export default {
     getProducts: () => {
       return AxiosPoint.get('/products');
     },
+    getProductsById: (id) => {
+      return AxiosPoint.get(`/products/${id}`);
+    },
 
     AxiosPoint,
 }
